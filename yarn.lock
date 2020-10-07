@@ -1471,9 +1471,10 @@ jenkins-js-modules@1.3.0:
   dependencies:
     window-handle "0.0.6"
 
-jenkins-js-test@0.0.15:
-  version "0.0.15"
-  resolved "https://repo.jenkins-ci.org/api/npm/npm/jenkins-js-test/-/jenkins-js-test-0.0.15.tgz#08ea4b67acfb5abaa3bf79a32da4c013a29a4c05"
+jenkins-js-test@0.0.16:
+  version "0.0.16"
+  resolved "https://registry.yarnpkg.com/jenkins-js-test/-/jenkins-js-test-0.0.16.tgz#1e9df1cc7935ad5cf29634a42250c90db55ea0f4"
+  integrity sha1-Hp3xzHk1rVzyljSkIlDJDbVeoPQ=
   dependencies:
     bootstrap-detached "^3.3.4-v6"
     bootstrap-detached-3.3 "^3.3.4-v5"
