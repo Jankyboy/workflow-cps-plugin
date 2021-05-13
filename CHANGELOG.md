@@ -1,5 +1,62 @@
 ## Changelog
 
+* For newer versions, see [GitHub Releases](https://github.com/jenkinsci/workflow-cps-plugin/releases)
+
+### 2.90
+
+Release date: 2021-02-24
+
+* Fix: use `EnvVars.get()` instead of `TreeMap.get()` to guard against stray null value environment variables ([JENKINS-64729](https://issues.jenkins.io/browse/JENKINS-64729))
+
+### 2.89
+
+Release date: 2021-02-17
+
+* Fix: Help link positioning for Snippet Generator with tables-to-divs ([PR #411](https://github.com/jenkinsci/workflow-cps-plugin/pull/411)
+
+### 2.88
+
+Release date: 2021-02-15
+
+* Fix: Lightweight checkout ignored pipeline durability settings ([JENKINS-63305](https://issues.jenkins.io/browse/JENKINS-63305))
+* Internal: Update various dependencies ([PR #404](https://github.com/jenkinsci/workflow-cps-plugin/pull/404), [PR #405](https://github.com/jenkinsci/workflow-cps-plugin/pull/405), [PR #412](https://github.com/jenkinsci/workflow-cps-plugin/pull/412), [PR #413](https://github.com/jenkinsci/workflow-cps-plugin/pull/413))
+
+### 2.87
+
+Release date: 2020-11-30
+
+* Improvement: Do not check empty value environment variables for Groovy string interpolation. ([JENKINS-64282](https://issues.jenkins-ci.org/browse/JENKINS-64282))
+
+### 2.86
+
+Release date: 2020-11-18
+
+* Fix: Revert changes to usage of `NamedArgsAndClosure` class in version 2.85 that caused various regressions for Declarative Pipelines. ([JENKINS-64185](https://issues.jenkins-ci.org/browse/JENKINS-64185))
+
+### 2.85
+
+Release date: 2020-11-09
+
+* Improvement: Add warnings when secrets are used with Groovy String interpolation. ([JENKINS-63254](https://issues.jenkins-ci.org/browse/JENKINS-63254))
+    * Warnings are configured by setting `org.jenkinsci.plugins.workflow.cps.DSL.UNSAFE_GROOVY_INTERPOLATION` to the following values:
+        * `ignore`: warnings are disabled
+        * `fail`: warnings will cause Pipeline builds to fail
+        * not setting any value will display warnings to the console log and build page
+* Fix: Allow masking of secret variables that use the same name as system variables. ([JENKINS-47101](https://issues.jenkins-ci.org/browse/JENKINS-47101))
+* Fix: Throw an error when a step that requires a body has no body. ([PR #370](https://github.com/jenkinsci/workflow-cps-plugin/pull/370))
+
+### 2.84
+
+Release date: 2020-10-30
+
+* Improvement: Make the Pipeline editor resizable ([JENKINS-31592](https://issues.jenkins-ci.org/browse/JENKINS-31592), [JENKINS-32297](https://issues.jenkins-ci.org/browse/JENKINS-32297), [JENKINS-38276](https://issues.jenkins-ci.org/browse/JENKINS-38276), [PR #391](https://github.com/jenkinsci/workflow-cps-plugin/pull/391))
+* Fix: Do not save Pipeline state to `program.dat` when Pipeline resumption is disabled ([PR #377](https://github.com/jenkinsci/workflow-cps-plugin/pull/377))
+* Internal: Update jQuery by migrating frontend toolchain from `js-builder` to Webpack ([PR #391](https://github.com/jenkinsci/workflow-cps-plugin/pull/391))
+* Internal: Update parent POM and various dependencies ([PR #380](https://github.com/jenkinsci/workflow-cps-plugin/pull/380), [PR #384](https://github.com/jenkinsci/workflow-cps-plugin/pull/384), [PR #385](https://github.com/jenkinsci/workflow-cps-plugin/pull/385), [PR #387](https://github.com/jenkinsci/workflow-cps-plugin/pull/387), [PR #388](https://github.com/jenkinsci/workflow-cps-plugin/pull/388), [PR #389](https://github.com/jenkinsci/workflow-cps-plugin/pull/389), [PR #390](https://github.com/jenkinsci/workflow-cps-plugin/pull/390))
+* Internal: Update some tests to use `JenkinsSessionRule` ([PR #381](https://github.com/jenkinsci/workflow-cps-plugin/pull/381))
+* Internal: Add regression tests for SECURITY-2020 ([PR #379](https://github.com/jenkinsci/workflow-cps-plugin/pull/379))
+* Internal: Enable Dependabot on repository ([PR #382](https://github.com/jenkinsci/workflow-cps-plugin/pull/382))
+
 ### 2.83
 
 Release date: 2020-09-03
